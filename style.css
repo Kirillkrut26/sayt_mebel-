@@ -1,0 +1,155 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Сброс настроек */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* Поменяй на свой шрифт, если есть */
+    color: white;
+}
+
+/* Общий контейнер для выравнивания по центру экрана */
+.container {
+    max-width: 1200px; /* Ширина контента как на дорогих сайтах */
+    margin: 0 auto;    /* Центрирует сам контейнер */
+    padding: 0 40px;   /* Отступы от краев, чтобы текст не касался рамок */
+    width: 100%;
+}
+
+/* Главный экран (Hero) */
+.hero {
+    width: 100%;
+    height: 100vh; /* Ровно на весь экран монитора */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('./images/Rectangle\ 15.jpg') no-repeat center center; /* Замени путь на свою картинку */
+    background-size: cover; /* Растягивает картинку идеально */
+    
+    display: flex;
+    align-items: center; /* Центрирует текст по вертикали */
+}
+
+/* Шапка (Header) */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Тонкая линия */
+    padding: 25px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Лого слева, меню справа */
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Контент в центре экрана */
+.hero-content {
+    text-align: left; /* ПРИНУДИТЕЛЬНО ВЛЕВО */
+    max-width: 700px;  /* Чтобы текст не растягивался на всю ширину */
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-catalog {
+    color: white;
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Общие отступы для секции каталога */
+.catalog {
+    padding: 80px 0;
+    color: #000; /* Текст тут черный, в отличие от Hero */
+    background-color: #fff;
+}
+
+.catalog-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Сетка: 3 колонки, которые сами подстраиваются */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+    gap: 40px 30px; /* Отступы между карточками (вертикаль, горизонталь) */
+    margin-bottom: 60px;
+}
+
+/* Стили карточки */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Чтобы фото не искажалось */
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Выравнивает цены по одной линии */
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Футер в самом низу */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 14px;
+}
